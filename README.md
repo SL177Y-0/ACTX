@@ -22,12 +22,12 @@ ACT.X is a UUPS-upgradeable ERC-20 rewards token powering the BlessUP ecosystem�
 - **Fixed Supply**: 100,000,000 ACTX (no inflation)
 - **Transaction Tax (Recycling)**: Sustainable 2% tax refills reward pool
 - **Micro-Rewards Distribution**: Role-based instant reward payouts
-- ⬆**UUPS Upgradeability**: Gas-efficient upgrades with multi-sig control
+- **UUPS Upgradeability**: Gas-efficient upgrades with multi-sig control
 - **Security First**: ReentrancyGuard, Pausable, AccessControl
 
 ---
 
-##  Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -74,7 +74,7 @@ ACT.X is a UUPS-upgradeable ERC-20 rewards token powering the BlessUP ecosystem�
 
 ---
 
-##  Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -85,8 +85,8 @@ ACT.X is a UUPS-upgradeable ERC-20 rewards token powering the BlessUP ecosystem�
 
 ```bash
 # Clone the repository
-git clone https://github.com/blessup/actx-token.git
-cd actx-token
+git clone https://github.com/SL177Y-0/ACTX.git
+cd ACTX
 
 # Install dependencies
 forge install OpenZeppelin/openzeppelin-contracts@v5.0.0
@@ -203,7 +203,7 @@ Complete interface definition for integrations:
 
 ---
 
-##  Testing
+## Testing
 
 ### Run All Tests
 
@@ -239,27 +239,27 @@ forge coverage --report lcov
 
 ### Test Results
 
-**Current Status:** . **All 79 tests passing**
+**Current Status:** ✅ **All 79 tests passing**
 
 | Test Suite | Tests | Status |
 |------------|-------|--------|
-| Unit Tests | 58 | . All passing |
-| Fuzz Tests | 9 | . All passing |
-| Invariant Tests | 12 | . All passing |
-| **Total** | **79** | . **100% passing** |
+| Unit Tests | 58 | ✅ All passing |
+| Fuzz Tests | 9 | ✅ All passing |
+| Invariant Tests | 12 | ✅ All passing |
+| **Total** | **79** | ✅ **100% passing** |
 
 **Test Categories:**
-- . Initialization & deployment
-- . ERC-20 standard functions
-- . Transaction tax mechanism
-- . Tax exemptions
-- . Reward distribution
-- . Role-based access control
-- . Upgradeability (UUPS)
-- . Pausable functionality
-- . Edge cases & boundary conditions
-- . Fuzz testing (random inputs)
-- . Invariant testing (total supply, tax limits)
+- ✅ Initialization & deployment
+- ✅ ERC-20 standard functions
+- ✅ Transaction tax mechanism
+- ✅ Tax exemptions
+- ✅ Reward distribution
+- ✅ Role-based access control
+- ✅ Upgradeability (UUPS)
+- ✅ Pausable functionality
+- ✅ Edge cases & boundary conditions
+- ✅ Fuzz testing (random inputs)
+- ✅ Invariant testing (total supply, tax limits)
 
 ### Gas Benchmarks
 
@@ -274,7 +274,7 @@ forge coverage --report lcov
 
 ---
 
-##  Deployment
+## Deployment
 
 ### Deployed Contracts (Base Sepolia)
 
@@ -356,7 +356,7 @@ cast call 0x744A7B2B81D72DA705378614b6028aF798077625 "name()" --rpc-url https://
 
 ---
 
-##  RPC Node Integration Plan
+## RPC Node Integration Plan
 
 ### Architecture Requirements
 
@@ -436,7 +436,7 @@ const distributeReward = async (recipient, amount, activityId) => {
 
 ---
 
-##  Security
+## Security
 
 ### Design Principles
 
@@ -457,16 +457,16 @@ const distributeReward = async (recipient, amount, activityId) => {
 
 | Check | Status |
 |-------|--------|
-| Reentrancy protection | . `ReentrancyGuard` on `distributeReward` |
-| Integer overflow | . Solidity 0.8.24 built-in |
-| Access control | . OpenZeppelin `AccessControl` |
-| Upgrade safety | . `_disableInitializers()` + `UPGRADER_ROLE` |
-| Tax rate cap | . Hard-coded 10% maximum |
-| Storage collision | . ERC-7201 namespaced storage |
+| Reentrancy protection | ✅ `ReentrancyGuard` on `distributeReward` |
+| Integer overflow | ✅ Solidity 0.8.26 built-in |
+| Access control | ✅ OpenZeppelin `AccessControl` |
+| Upgrade safety | ✅ `_disableInitializers()` + `UPGRADER_ROLE` |
+| Tax rate cap | ✅ Hard-coded 10% maximum |
+| Storage collision | ✅ ERC-7201 namespaced storage |
 
 ---
 
-##  Tokenomics
+## Tokenomics
 
 | Allocation | Amount | Percentage | Purpose |
 |------------|--------|------------|---------|
@@ -490,7 +490,7 @@ Example: 1000 ACTX transfer
 
 ---
 
-##  Project Structure
+## Project Structure
 
 ```
 actx-token/
@@ -740,6 +740,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Base](https://base.org/) - Secure, low-cost L2 for mainstream adoption
 
 ---
+
+<div align="center">
+
+**Built with ❤️ by the BlessUP Team**
+
+*Making positive referral marketing magical, meaningful, and measurable.*
 
 </div>
 
