@@ -1,0 +1,71 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# ACT.X Token - Foundry Configuration
+# BlessUP Rewards Token with UUPS Upgradeability
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+test = "test"
+script = "script"
+
+# Solidity Configuration
+solc = "0.8.24"
+evm_version = "shanghai"
+via_ir = true
+optimizer = true
+optimizer_runs = 1000
+
+# Build Settings
+auto_detect_solc = false
+offline = false
+bytecode_hash = "ipfs"
+cbor_metadata = true
+
+# Testing Configuration
+verbosity = 2
+fuzz = { runs = 1000, max_test_rejects = 65536 }
+invariant = { runs = 256, depth = 50, fail_on_revert = false }
+
+# Gas Reporting
+gas_reports = ["ACTXToken", "Vesting", "Airdrop"]
+gas_reports_ignore = []
+
+# Remappings
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "forge-std/=lib/forge-std/src/"
+]
+
+# Formatter
+[fmt]
+line_length = 100
+tab_width = 4
+bracket_spacing = true
+int_types = "long"
+multiline_func_header = "all"
+quote_style = "double"
+number_underscore = "thousands"
+wrap_comments = true
+
+# RPC Endpoints
+[rpc_endpoints]
+sepolia = "${SEPOLIA_RPC_URL}"
+base_sepolia = "${BASE_SEPOLIA_RPC_URL}"
+base_mainnet = "${BASE_MAINNET_RPC_URL}"
+localhost = "http://127.0.0.1:8545"
+
+# Etherscan API Keys for Verification
+[etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}", url = "https://api-sepolia.etherscan.io/api" }
+base_sepolia = { key = "${BASESCAN_API_KEY}", url = "https://api-sepolia.basescan.org/api" }
+base_mainnet = { key = "${BASESCAN_API_KEY}", url = "https://api.basescan.org/api" }
+
+# CI Profile (stricter settings)
+[profile.ci]
+fuzz = { runs = 10000 }
+invariant = { runs = 500, depth = 100 }
+verbosity = 3
+

@@ -1,0 +1,45 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# ACT.X Token - Git Ignore Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Foundry Build Artifacts
+/out/
+/cache/
+
+# Dependencies
+/lib/
+
+# Environment Files (NEVER COMMIT!)
+.env
+.env.*
+!.env.example
+
+# IDE & Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Foundry Coverage & Gas Reports
+lcov.info
+coverage/
+gas-report.txt
+
+# Broadcast files (deployment artifacts - keep for records if needed)
+/broadcast/
+
+# Node (if using with Hardhat compatibility)
+node_modules/
+
+# Slither Analysis
+slither-report/
+*.sarif
+
+# Test Snapshots
+.forge-snapshots/
+
