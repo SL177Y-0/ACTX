@@ -239,27 +239,27 @@ forge coverage --report lcov
 
 ### Test Results
 
-**Current Status:** ✅ **All 79 tests passing**
+**Current Status:** **All 79 tests passing**
 
 | Test Suite | Tests | Status |
 |------------|-------|--------|
-| Unit Tests | 58 | ✅ All passing |
-| Fuzz Tests | 9 | ✅ All passing |
-| Invariant Tests | 12 | ✅ All passing |
-| **Total** | **79** | ✅ **100% passing** |
+| Unit Tests | 58 | All passing |
+| Fuzz Tests | 9 | All passing |
+| Invariant Tests | 12 | All passing |
+| **Total** | **79** | **100% passing** |
 
 **Test Categories:**
-- ✅ Initialization & deployment
-- ✅ ERC-20 standard functions
-- ✅ Transaction tax mechanism
-- ✅ Tax exemptions
-- ✅ Reward distribution
-- ✅ Role-based access control
-- ✅ Upgradeability (UUPS)
-- ✅ Pausable functionality
-- ✅ Edge cases & boundary conditions
-- ✅ Fuzz testing (random inputs)
-- ✅ Invariant testing (total supply, tax limits)
+- Initialization & deployment
+- ERC-20 standard functions
+- Transaction tax mechanism
+- Tax exemptions
+- Reward distribution
+- Role-based access control
+- Upgradeability (UUPS)
+- Pausable functionality
+- Edge cases & boundary conditions
+- Fuzz testing (random inputs)
+- Invariant testing (total supply, tax limits)
 
 ### Gas Benchmarks
 
@@ -457,12 +457,12 @@ const distributeReward = async (recipient, amount, activityId) => {
 
 | Check | Status |
 |-------|--------|
-| Reentrancy protection | ✅ `ReentrancyGuard` on `distributeReward` |
-| Integer overflow | ✅ Solidity 0.8.26 built-in |
-| Access control | ✅ OpenZeppelin `AccessControl` |
-| Upgrade safety | ✅ `_disableInitializers()` + `UPGRADER_ROLE` |
-| Tax rate cap | ✅ Hard-coded 10% maximum |
-| Storage collision | ✅ ERC-7201 namespaced storage |
+| Reentrancy protection | `ReentrancyGuard` on `distributeReward` |
+| Integer overflow | Solidity 0.8.26 built-in |
+| Access control | OpenZeppelin `AccessControl` |
+| Upgrade safety | `_disableInitializers()` + `UPGRADER_ROLE` |
+| Tax rate cap | Hard-coded 10% maximum |
+| Storage collision | ERC-7201 namespaced storage |
 
 ---
 
@@ -743,7 +743,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Built with ❤️ by the BlessUP Team**
+**Built by the BlessUP Team**
 
 *Making positive referral marketing magical, meaningful, and measurable.*
 
