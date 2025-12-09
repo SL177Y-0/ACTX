@@ -1,0 +1,704 @@
+PS C:\Users\Admin\Downloads\ActX> $env:PATH = "$env:USERPROFILE\.foundry\bin;$env:PATH"; forge test --summary
+[⠊] Compiling...
+No files changed, compilation skipped
+Warning: Failure from "C:/Users/Admin/Downloads/ActX/cache/invariant/failures/ACTXTokenInvariantTest/invariant_TreasuryExempt" file was ignored because test contract bytecode has changed.
+Warning: Failure from "C:/Users/Admin/Downloads/ActX/cache/invariant/failures/ACTXTokenInvariantTest/invariant_ReservoirExempt" file was ignored because test contract bytecode has changed.
+
+Ran 58 tests for test/ACTXToken.t.sol:ACTXTokenTest
+[PASS] test_Approve_Basic() (gas: 45821)
+[PASS] test_BatchDistributeRewards_Success() (gas: 130473)
+[PASS] test_CalculateTax() (gas: 14004)
+[PASS] test_CirculatingSupply() (gas: 17748)
+[PASS] test_Decimals() (gas: 10946)
+[PASS] test_DistributeReward_EmitsEvent() (gas: 62597)
+[PASS] test_DistributeReward_NoTax() (gas: 67699)
+[PASS] test_DistributeReward_RevertInsufficientPool() (gas: 33459)
+[PASS] test_DistributeReward_RevertUnauthorized() (gas: 22088)
+[PASS] test_DistributeReward_RevertWhenPaused() (gas: 56965)
+[PASS] test_DistributeReward_RevertZeroAddress() (gas: 26825)
+[PASS] test_DistributeReward_RevertZeroAmount() (gas: 28315)
+[PASS] test_DistributeReward_Success() (gas: 61375)
+[PASS] test_GrantRole_Success() (gas: 49709)
+[PASS] test_Initialize_AdminRole() (gas: 15315)
+[PASS] test_Initialize_CannotReinitialize() (gas: 24593)
+[PASS] test_Initialize_ContractTaxExempt() (gas: 13035)
+[PASS] test_Initialize_Name() (gas: 17488)
+[PASS] test_Initialize_Reservoir() (gas: 14843)
+[PASS] test_Initialize_ReservoirTaxExempt() (gas: 16640)
+[PASS] test_Initialize_RevertExcessiveTaxRate() (gas: 3148024)
+[PASS] test_Initialize_RevertZeroReservoir() (gas: 3145553)
+[PASS] test_Initialize_RevertZeroTreasury() (gas: 3146122)
+[PASS] test_Initialize_Symbol() (gas: 18896)
+[PASS] test_Initialize_TaxRate() (gas: 13550)
+[PASS] test_Initialize_TotalSupply() (gas: 12678)
+[PASS] test_Initialize_Treasury() (gas: 16179)
+[PASS] test_Initialize_TreasuryBalance() (gas: 15237)
+[PASS] test_Initialize_TreasuryTaxExempt() (gas: 15342)
+[PASS] test_Initialize_UpgraderRole() (gas: 16393)
+[PASS] test_MaxTaxRate_Constant() (gas: 11071)
+[PASS] test_Pause_RevertUnauthorized() (gas: 19509)
+[PASS] test_Pause_Success() (gas: 43665)
+[PASS] test_RenounceRole_Success() (gas: 21887)
+[PASS] test_RevokeRole_Success() (gas: 27606)
+[PASS] test_RewardPoolBalance() (gas: 13823)
+[PASS] test_SetReservoir_RevertZeroAddress() (gas: 19367)
+[PASS] test_SetReservoir_Success() (gas: 56625)
+[PASS] test_SetTaxExempt_RemoveExemption() (gas: 36934)
+[PASS] test_SetTaxExempt_Success() (gas: 45704)
+[PASS] test_SetTaxRate_EmitsEvent() (gas: 29110)
+[PASS] test_SetTaxRate_RevertExceedsMax() (gas: 19433)
+[PASS] test_SetTaxRate_RevertUnauthorized() (gas: 18796)
+[PASS] test_SetTaxRate_Success() (gas: 26899)
+[PASS] test_TaxCollection_AccumulatesInReservoir() (gas: 200132)
+[PASS] test_TotalSupply_Constant() (gas: 12329)
+[PASS] test_TransferFrom_Basic() (gas: 114946)
+[PASS] test_Transfer_Basic() (gas: 54683)
+[PASS] test_Transfer_EntireBalance() (gas: 102353)
+[PASS] test_Transfer_FromExemptAddress() (gas: 60692)
+[PASS] test_Transfer_RevertWhenPaused() (gas: 48734)
+[PASS] test_Transfer_ToExemptAddress() (gas: 45660)
+[PASS] test_Transfer_WithTax() (gas: 103819)
+[PASS] test_Transfer_ZeroTaxRate() (gas: 83723)
+[PASS] test_Unpause_Success() (gas: 33068)
+[PASS] test_Upgrade_AuthorizedUpgrader() (gas: 3087236)
+[PASS] test_Upgrade_RevertUnauthorized() (gas: 3074734)
+[PASS] test_Version() (gas: 15091)
+Suite result: ok. 58 passed; 0 failed; 0 skipped; finished in 4.44s (23.10ms CPU time)
+
+Ran 9 tests for test/ACTXToken.invariants.t.sol:ACTXTokenInvariantTest
+[PASS] invariant_ContractExempt() (runs: 256, calls: 12800, reverts: 0)
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3129  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3233  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3248  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3190  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 294
+  Bound result 27941418859446841003488989
+  Bound result 509460748252293711701117
+  Bound result 10000
+  Bound result 300
+  Bound result 146
+  Bound result 2022
+  Bound result 656
+  Bound result 200
+  Bound result 92791078588464891
+  Bound result 10
+  Bound result 78247369228408758
+  Bound result 107
+  Bound result 620
+  Bound result 972
+  Bound result 1549120299509786696332679
+  Bound result 66
+  Bound result 1
+  Bound result 178
+  Bound result 1
+  Bound result 893
+  Bound result 1
+  Bound result 893
+  Bound result 100
+  Bound result 232
+  Bound result 0
+
+[PASS] invariant_ReservoirExempt() (runs: 256, calls: 12800, reverts: 0)
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3210  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3220  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3173  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3197  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 820
+  Bound result 433
+  Bound result 81
+  Bound result 47
+  Bound result 22858254231018117812073397
+  Bound result 2600080547417605772303310
+  Bound result 2
+  Bound result 70646732751292520482612
+  Bound result 1
+  Bound result 125
+  Bound result 300
+  Bound result 3172700356435939776070409
+  Bound result 10684
+  Bound result 4
+  Bound result 500
+  Bound result 722032
+  Bound result 1
+  Bound result 590490637077459314661950
+  Bound result 1
+  Bound result 1
+  Bound result 31536000
+  Bound result 1
+  Bound result 9792
+  Bound result 106
+  Bound result 2
+  Bound result 1
+  Bound result 68
+  Bound result 623
+  Bound result 2
+  Bound result 1
+  Bound result 232873105344717464816322
+  Bound result 293
+  Bound result 87
+
+[PASS] invariant_ReservoirMonotonic() (runs: 256, calls: 12800, reverts: 0)     
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3123  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3208  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3285  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3184  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 2
+  Bound result 10
+  Bound result 700
+  Bound result 3
+  Bound result 14088
+  Bound result 643
+  Bound result 100
+  Bound result 10
+  Bound result 1
+  Bound result 326
+  Bound result 3
+  Bound result 999
+  Bound result 6
+  Bound result 1000000000000000000
+  Bound result 745
+  Bound result 1
+  Bound result 271333021711651980234998
+  Bound result 200
+  Bound result 666
+  Bound result 3152543415192884034165094
+  Bound result 428
+  Bound result 23511139842253141854931768
+  Bound result 2
+  Bound result 834
+  Bound result 30000000
+  Bound result 2905242563175949409392709
+  Bound result 109019730584026779344067
+  Bound result 18
+  Bound result 45933861264829735407373
+
+[PASS] invariant_RewardPoolBounded() (runs: 256, calls: 12800, reverts: 0)      
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3225  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3198  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3185  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3192  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 46459009280591167642724470
+  Bound result 96
+  Bound result 176239
+  Bound result 1000000000000000000
+  Bound result 580
+  Bound result 105430
+  Bound result 1000
+  Bound result 312970134247796155
+  Bound result 10
+  Bound result 7606162327446715241211602
+  Bound result 100
+  Bound result 668
+  Bound result 34041
+  Bound result 1
+  Bound result 202
+  Bound result 532
+  Bound result 1000
+  Bound result 23095373527620091173
+  Bound result 18365
+  Bound result 100
+  Bound result 17125720816915376065604739
+  Bound result 200
+  Bound result 496
+  Bound result 0
+  Bound result 1
+  Bound result 31
+  Bound result 382
+  Bound result 1
+  Bound result 472
+  Bound result 4197886964168539954756615
+  Bound result 805
+  Bound result 300
+  Bound result 545061248051029
+  Bound result 618
+  Bound result 269
+  Bound result 1028642168309228535938354
+  Bound result 5882331285551924765866
+  Bound result 22975154090917779291278
+
+[PASS] invariant_SupplyConservation() (runs: 256, calls: 12800, reverts: 0)     
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3217  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3189  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3284  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3110  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 991
+  Bound result 1000
+  Bound result 335
+  Bound result 416
+  Bound result 134
+  Bound result 4114037755174501383221793
+  Bound result 259
+  Bound result 84
+  Bound result 20889450362759994049982053
+  Bound result 3
+  Bound result 10193863800626806990301942
+  Bound result 10153187935312881290661769
+  Bound result 100000000
+  Bound result 4
+  Bound result 1
+  Bound result 117
+  Bound result 491
+  Bound result 165
+  Bound result 2
+  Bound result 16777944931350733624822556
+  Bound result 560
+  Bound result 312281
+  Bound result 312281
+  Bound result 438084082082334143281
+  Bound result 5538472424803727901670210
+  Bound result 13
+  Bound result 1
+  Bound result 10
+  Bound result 2
+  Bound result 347
+  Bound result 2
+  Bound result 341
+  Bound result 181617
+  Bound result 881
+
+[PASS] invariant_TaxRateWithinBounds() (runs: 256, calls: 12800, reverts: 0)    
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3152  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3192  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3268  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3188  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 4630482187385737352513323
+  Bound result 845
+  Bound result 1000
+  Bound result 795
+  Bound result 4630482187385737352513322
+  Bound result 710
+  Bound result 2775674093238854906720636
+  Bound result 11180977783023310712402744
+  Bound result 524
+  Bound result 999
+  Bound result 860
+  Bound result 185
+  Bound result 848
+  Bound result 364210733351500863443480
+  Bound result 310
+  Bound result 581320
+  Bound result 1
+  Bound result 13619
+  Bound result 4348378282701950223348913
+  Bound result 1029870262068620694315
+  Bound result 1000000000000000000
+  Bound result 624
+  Bound result 1
+  Bound result 8
+  Bound result 664
+  Bound result 776
+  Bound result 2
+  Bound result 248241015436945301648632
+  Bound result 227
+  Bound result 9583
+
+[PASS] invariant_TotalSupplyFixed() (runs: 256, calls: 12800, reverts: 0)       
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3242  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3198  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3172  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3188  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 204
+  Bound result 1258
+  Bound result 334
+  Bound result 3449
+  Bound result 7758493805691485220927008
+  Bound result 18
+  Bound result 1
+  Bound result 2
+  Bound result 729
+  Bound result 7862
+  Bound result 51
+  Bound result 8337
+  Bound result 1
+  Bound result 1
+  Bound result 2
+  Bound result 756
+  Bound result 797
+  Bound result 3087613802295506413565978
+  Bound result 3378510460090700020118315
+  Bound result 492
+  Bound result 520
+  Bound result 17470353175626255198650310
+  Bound result 2957397979
+  Bound result 2
+  Bound result 18
+  Bound result 3
+  Bound result 4502678667855407798398314
+  Bound result 0
+  Bound result 42
+  Bound result 30
+  Bound result 2
+  Bound result 30000000
+  Bound result 3696
+  Bound result 12161
+  Bound result 17
+  Bound result 454
+  Bound result 1
+  Bound result 681
+
+[PASS] invariant_TreasuryExempt() (runs: 256, calls: 12800, reverts: 0)
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3207  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3148  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3190  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3255  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 10845911697257811380892730
+  Bound result 970
+  Bound result 17936906284
+  Bound result 10823374283
+  Bound result 10403
+  Bound result 127
+  Bound result 975
+  Bound result 83
+  Bound result 1425886545
+  Bound result 415
+  Bound result 10908181553503201744807022
+  Bound result 1
+  Bound result 2
+  Bound result 1000
+  Bound result 57
+  Bound result 44
+  Bound result 202
+  Bound result 6697
+  Bound result 999
+  Bound result 2
+  Bound result 18
+  Bound result 5822943116419853444845836
+  Bound result 803
+  Bound result 5147
+  Bound result 1
+  Bound result 11155
+  Bound result 10093
+  Bound result 1
+  Bound result 9
+  Bound result 1
+  Bound result 100497008352073896918225
+  Bound result 13919
+  Bound result 991
+  Bound result 799395529560850812286103
+
+[PASS] invariant_callSummary() (runs: 256, calls: 12800, reverts: 0)
+
+╭------------------+------------------+-------+---------+----------╮
+| Contract         | Selector         | Calls | Reverts | Discards |
++==================================================================+
+| ACTXTokenHandler | distributeReward | 3117  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxExempt     | 3254  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | setTaxRate       | 3205  | 0       | 0        |
+|------------------+------------------+-------+---------+----------|
+| ACTXTokenHandler | transfer         | 3224  | 0       | 0        |
+╰------------------+------------------+-------+---------+----------╯
+
+Logs:
+  Bound result 513
+  Bound result 184
+  Bound result 2
+  Bound result 834
+  Bound result 880
+  Bound result 6725960854850644832243029
+  Bound result 379
+  Bound result 27241423815931232934663
+  Bound result 3
+  Bound result 19845497584654010072143822
+  Bound result 288
+  Bound result 828
+  Bound result 315
+  Bound result 517
+  Bound result 271
+  Bound result 1
+  Bound result 31536000
+  Bound result 1841100306509175498202879
+  Bound result 4
+  Bound result 3301256765424930473194058
+  Bound result 2
+  Bound result 1
+  Bound result 98
+  Bound result 35
+  Bound result 696
+  Bound result 6
+  Bound result 1
+  Bound result 93723081694306595652260
+  Bound result 750
+  Bound result 397
+  Bound result 33561713376107995230790
+  Bound result 47
+  Bound result 500
+  Bound result 2
+  Bound result 14
+  ===================================================
+  INVARIANT TEST SUMMARY
+  ===================================================
+  Total Supply: 100000000 ACTX
+  Tax Rate: 14 bps
+  Reward Pool: 0 ACTX
+  Reservoir: 0 ACTX
+  Actors tracked: 22
+  Total distributed: 30000000 ACTX
+  ===================================================
+
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 4.44s (30.98s CPU time)
+
+Ran 12 tests for test/ACTXToken.fuzz.t.sol:ACTXTokenFuzzTest
+[PASS] testFuzz_CalculateTax_Precision(uint256,uint256) (runs: 1000, μ: 31082, ~: 31178)
+[PASS] testFuzz_DistributeReward_RevertExceedsPool(uint256) (runs: 1000, μ: 36126, ~: 36121)
+[PASS] testFuzz_DistributeReward_ValidAmount(uint256) (runs: 1000, μ: 68891, ~: 68769)
+[PASS] testFuzz_MultipleTransfers_SupplyConserved(uint256,uint256,uint256) (runs: 1000, μ: 159393, ~: 160797)
+[PASS] testFuzz_SetTaxExempt_AnyAddress(address) (runs: 1000, μ: 34965, ~: 34966)
+[PASS] testFuzz_SetTaxExempt_RevertZeroAddress() (gas: 18321)
+[PASS] testFuzz_SetTaxRate_RevertInvalid(uint256) (runs: 1000, μ: 23108, ~: 23077)
+[PASS] testFuzz_SetTaxRate_ValidRange(uint256) (runs: 1000, μ: 29739, ~: 29921) 
+[PASS] testFuzz_TaxCalculation_NeverExceedsAmount(uint256) (runs: 1000, μ: 16033, ~: 16021)
+[PASS] testFuzz_Transfer_ExemptNoTax(uint256) (runs: 1000, μ: 64704, ~: 64626)  
+[PASS] testFuzz_Transfer_MinimumAmount() (gas: 89151)
+[PASS] testFuzz_Transfer_TaxCalculationCorrect(uint256) (runs: 1000, μ: 106999, ~: 110140)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 4.48s (18.77s CPU time)
+
+╭------------------------+--------+--------+---------╮
+| Test Suite             | Passed | Failed | Skipped |
++====================================================+
+| ACTXTokenFuzzTest      | 12     | 0      | 0       |
+|------------------------+--------+--------+---------|
+| ACTXTokenInvariantTest | 9      | 0      | 0       |
+|------------------------+--------+--------+---------|
+| ACTXTokenTest          | 58     | 0      | 0       |
+╰------------------------+--------+--------+---------╯
+
+PS C:\Users\Admin\Downloads\ActX> if (Test-Path .env) { Write-Host ".env file exists" } else { Write-Host ".env file does NOT exist - create it from env.example" }
+.env file exists
+PS C:\Users\Admin\Downloads\ActX> $env:PATH = "$env:USERPROFILE\.foundry\bin;$env:PATH"; if ($env:PRIVATE_KEY) { Write-Host "PRIVATE_KEY: Set" } else { Write-Host "PRIVATE_KEY: NOT SET - Please set in .env file" }; if ($env:BASE_SEPOLIA_RPC_URL) { Write-Host "BASE_SEPOLIA_RPC_URL: Set" } else { Write-Host "BASE_SEPOLIA_RPC_URL: NOT SET - Using public endpoint"; $env:BASE_SEPOLIA_RPC_URL = "https://sepolia.base.org" }
+PRIVATE_KEY: NOT SET - Please set in .env file
+BASE_SEPOLIA_RPC_URL: NOT SET - Using public endpoint
+PS C:\Users\Admin\Downloads\ActX> $env:PATH = "$env:USERPROFILE\.foundry\bin;$env:PATH"; $deployer = cast wallet address --private-key $env:PRIVATE_KEY 2>$null; if ($LASTEXITCODE -eq 0) { Write-Host "Deployer Address: $deployer" } else { Write-Host "Error: Could not get address from PRIVATE_KEY. Check your .env file." }
+Error: Could not get address from PRIVATE_KEY. Check your .env file.
+PS C:\Users\Admin\Downloads\ActX> $env:PATH = "$env:USERPROFILE\.foundry\bin;$env:PATH"; if (-not $env:BASE_SEPOLIA_RPC_URL) { $env:BASE_SEPOLIA_RPC_URL = "https://sepolia.base.org" }; Write-Host "Deploying to Base Sepolia..."; Write-Host "RPC URL: $env:BASE_SEPOLIA_RPC_URL"; forge script script/Deploy.s.sol:DeployTestnet --rpc-url $env:BASE_SEPOLIA_RPC_URL --broadcast -vvv
+Deploying to Base Sepolia...
+RPC URL: https://sepolia.base.org
+[⠊] Compiling...
+No files changed, compilation skipped
+2025-12-09T16:38:16.476691Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+2025-12-09T16:38:16.496760Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+2025-12-09T16:38:16.507533Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+2025-12-09T16:38:16.516661Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+2025-12-09T16:38:16.526885Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+2025-12-09T16:39:16.717248Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+2025-12-09T16:39:16.736804Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+ected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+2025-12-09T16:39:16.761768Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+2025-12-09T16:39:16.772499Z ERROR etherscan: Failed to deserialize response: expected value at line 1 column 1 res="<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+PS C:\Users\Admin\Downloads\ActX> 
+PS C:\Users\Admin\Downloads\ActX> Get-Content .env | ForEach-Object { if ($_ -match '^\s*([^#][^=]+)=(.*)$') { $key = $matches[1].Trim(); $value = $matches[2].Trim(); [Environment]::SetEnvironmentVariable($key, $value, 'Process'); Write-Host "Loaded: $key" } }
+Loaded: PRIVATE_KEY
+Loaded: SEPOLIA_RPC_URL
+Loaded: BASE_SEPOLIA_RPC_URL
+Loaded: BASE_MAINNET_RPC_URL
+Loaded: ETHERSCAN_API_KEY
+Loaded: BASESCAN_API_KEY
+Loaded: TREASURY_ADDRESS
+Loaded: RESERVOIR_ADDRESS
+Loaded: ADMIN_ADDRESS
+Loaded: REWARD_MANAGER_ADDRESS
+Loaded: INITIAL_TAX_RATE_BPS
+Loaded: REWARD_POOL_PERCENTAGE_BPS
+PS C:\Users\Admin\Downloads\ActX> 
+PS C:\Users\Admin\Downloads\ActX> $env:PATH = "$env:USERPROFILE\.foundry\bin;$env:PATH"; if ($env:PRIVATE_KEY) { $addr = cast wallet address --private-key $env:PRIVATE_KEY; Write-Host "Deployer: $addr"; $balance = cast balance $addr --rpc-url https://sepolia.base.org 2>$null; if ($balance) { Write-Host "Balance: $balance ETH" } else { Write-Host "Balance: Checking..." } } else { Write-Host "ERROR: PRIVATE_KEY not found in .env file" }
+Deployer: 0x2fC4B64da066918744ec8046Cd5d103f6d40469d
+Balance: 0 ETH
+PS C:\Users\Admin\Downloads\ActX> $env:PATH = "$env:USERPROFILE\.foundry\bin;$env:PATH"; if (-not $env:BASE_SEPOLIA_RPC_URL) { $env:BASE_SEPOLIA_RPC_URL = "https://sepolia.base.org" }; Write-Host "`n=== DEPLOYING ACT.X TOKEN TO BASE SEPOLIA ==="; Write-Host "RPC: $env:BASE_SEPOLIA_RPC_URL`n"; forge script script/Deploy.s.sol:DeployTestnet --rpc-url $env:BASE_SEPOLIA_RPC_URL --broadcast --skip-simulation -vv
+
+=== DEPLOYING ACT.X TOKEN TO BASE SEPOLIA ===
+RPC: https://sepolia.base.org
+
+[⠊] Compiling...
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  ===========================================================
+  ACT.X TESTNET DEPLOYMENT
+  ===========================================================
+  Deployer (all roles): 0x2fC4B64da066918744ec8046Cd5d103f6d40469d
+  Implementation: 0x1B837861e827af35a0B4c76f35324a28B73cf9FA
+  Proxy: 0x744A7B2B81D72DA705378614b6028aF798077625
+  Reward pool funded: 30,000,000 ACTX
+
+  DEPLOYMENT COMPLETE!
+  Proxy Address: 0x744A7B2B81D72DA705378614b6028aF798077625
+  Total Supply: 100000000 ACTX
+  Reward Pool: 30000000 ACTX
+  ===========================================================
+
+SKIPPING ON CHAIN SIMULATION.
+
+Transactions saved to: C:/Users/Admin/Downloads/ActX\broadcast\Deploy.s.sol\84532\run-latest.json      
+
+Sensitive values saved to: C:/Users/Admin/Downloads/ActX/cache\Deploy.s.sol\84532\run-latest.json      
+
+Error: Failed to send transaction after 4 attempts Err(Failed to estimate gas for tx                   
+
+Context:
+- server returned an error response: error code -32000: gas required exceeds allowance (0))
+
+Context:
+- Failed to build transaction: AnyTxType(2) transaction can't be built due to missing keys: ["gas_limit"]
+PS C:\Users\Admin\Downloads\ActX> Write-Host "`n=== DEPLOYMENT STATUS ==="; Write-Host "Deployer Address: 0x2fC4B64da066918744ec8046Cd5d103f6d40469d"; Write-Host "Current Balance: 0 ETH"; Write-Host "`nNEXT STEPS:"; Write-Host "1. Get Base Sepolia ETH from: https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet"; Write-Host "2. Send to: 0x2fC4B64da066918744ec8046Cd5d103f6d40469d"; Write-Host "3. Run deployment again`n"
+
+=== DEPLOYMENT STATUS ===
+Deployer Address: 0x2fC4B64da066918744ec8046Cd5d103f6d40469d
+Current Balance: 0 ETH
+
+
+PS C:\Users\Admin\Downloads\ActX>    Get-Content .env | ForEach-Object { if ($_ -match '^\s*([^#][^=]+)=(.*)$') { [Environment]::SetEnvironmentVariable($matches[1].Trim(), $matches[2].Trim(), 'Process') } }
+
+PS C:\Users\Admin\Downloads\ActX>    $env:PATH = "$env:USERPROFILE\.foundry\bin;$env:PATH"
+PS C:\Users\Admin\Downloads\ActX>    forge script script/Deploy.s.sol:DeployTestnet --rpc-url https://sepolia.base.org --broadcast -vv
+[⠊] Compiling...
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  ===========================================================
+  ACT.X TESTNET DEPLOYMENT
+  ===========================================================
+  Deployer (all roles): 0x2fC4B64da066918744ec8046Cd5d103f6d40469d
+  Implementation: 0x1B837861e827af35a0B4c76f35324a28B73cf9FA
+  Proxy: 0x744A7B2B81D72DA705378614b6028aF798077625
+  Reward pool funded: 30,000,000 ACTX
+
+  DEPLOYMENT COMPLETE!
+  Proxy Address: 0x744A7B2B81D72DA705378614b6028aF798077625
+  Total Supply: 100000000 ACTX
+  Reward Pool: 30000000 ACTX
+  ===========================================================
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 84532
+
+Estimated gas price: 0.0014 gwei
+
+Estimated total gas used for script: 5106660
+
+Estimated amount required: 0.000007149324 ETH
+
+==========================
+
+##### base-sepolia
+. [Success] Hash: 0xd0229b0ec906d58a4319a2ab4c9c0b56496ad6b70466797f98d3917b7f2bb538
+Contract Address: 0x1B837861e827af35a0B4c76f35324a28B73cf9FA
+Block: 34767673
+Paid: 0.0000039616056 ETH (3301338 gas * 0.0012 gwei)
+
+
+##### base-sepolia
+. [Success] Hash: 0x697f711ffe5af6a85a4dd3ab52b2eaefb322f13bde922d582e371a959f57d746
+Block: 34767673
+Paid: 0.0000000673524 ETH (56127 gas * 0.0012 gwei)
+
+
+##### base-sepolia
+. [Success] Hash: 0x2480a2395b1c2f6840fa5b99e3849cbb6dc96a322a7b6f2dee0addc51339fdfb
+Block: 34767673
+Paid: 0.00000007347 ETH (61225 gas * 0.0012 gwei)
+
+
+##### base-sepolia
+. [Success] Hash: 0xa192317353c9d707cd39959cd2ee57f5cd99e6af927b07ad086703333a7d5920
+Contract Address: 0x744A7B2B81D72DA705378614b6028aF798077625
+Block: 34767673
+Paid: 0.0000005980212 ETH (498351 gas * 0.0012 gwei)
+
+.Sequence #1 on base-sepolia | Total Paid: 0.0000047004492 ETH (3917041 gas * avg 0.0012 gwei)       
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: C:/Users/Admin/Downloads/ActX/broadcast\Deploy.s.sol\84532\run-latest.json      
+
+Sensitive values saved to: C:/Users/Admin/Downloads/ActX/cache\Deploy.s.sol\84532\run-latest.json      
+
+PS C:\Users\Admin\Downloads\ActX>
